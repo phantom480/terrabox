@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# Keys
+*.pem
+my-key
+my-key.pub
+
+# OS files
+.DS_Store
+Thumbs.db
