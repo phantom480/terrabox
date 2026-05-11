@@ -1,14 +1,23 @@
-# Terraform
+# 1. Add ignore rules
+cat > .gitignore <<'EOF'
 .terraform/
 *.tfstate
 *.tfstate.backup
 *.tfvars
-*.terraform.lock.hcl
-# Keys
 *.pem
 my-key
-my-key.pub
+*.exe
+.env
+EOF
 
-# OS files
-.DS_Store
-Thumbs.db
+# 2. Remove big file from git tracking
+git rm -r --cached .terraform
+
+# 3. Undo old commit history and recommit clean
+git reset --soft HEAD~1
+
+git add .
+git commit -m "Clean Terraform project files"
+
+# 4. Push again
+git push -u origin main
