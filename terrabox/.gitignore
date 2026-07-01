@@ -1,0 +1,27 @@
+# terraform stuff
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# secrets - keep the .example file though
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+
+*.tfplan
+*.plan
+
+# generated ssh key
+generated-key*
+*.pem
+
+override.tf
+override.tf.json
+
+.vscode/
+.idea/
+.DS_Store
+
+.env

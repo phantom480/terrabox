@@ -1,0 +1,20 @@
+# copy this to terraform.tfvars and fill in your own values
+# terraform.tfvars is gitignored, don't remove that from .gitignore
+
+aws_region   = "ap-south-1"
+project_name = "terrabox"
+environment  = "dev"
+
+# set this to your own IP, not 0.0.0.0/0
+# check it at https://checkip.amazonaws.com
+allowed_ssh_cidr = ["0.0.0.0/0"]
+
+# leave blank to auto generate a key pair, or paste your own public key
+public_key = ""
+
+# better to set this via env var instead:
+# export TF_VAR_db_password="something-strong"
+db_username = "dbadmin"
+db_password = "changeme"
+
+bucket_name_prefix = "terrabox-app-data"
